@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DJOUIMAA PLOMBRIE CHAUFAGE SANITAIRE - Vente de produits premium pour la plomberie, chauffage, sanitaire et piscine depuis 1988 à Sétif, Algérie.">
+    <meta name="keywords" content="plomberie, chauffage, sanitaire, piscine, tuyaux, pompes, WC, filtres, raccords, Sétif, Algérie, Geberit, Grohe, Tiemme, Bosch, ITAL">
+    <title>DJOUIMAA PLOMBRIE CHAUFAGE SANITAIRE - Sétif</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #003087;
+            --secondary-color: #ff9900;
+            --text-color: #333;
+            --background-color: #f7f8fc;
+            --card-bg-color: #ffffff;
+            --border-color: #e0e0e0;
+            --font-main: 'Roboto', Arial, sans-serif;
+            --font-headings: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+            background: var(--background-color);
+            font-family: var(--font-main);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-headings);
+            color: var(--primary-color);
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+        
+        section:nth-of-type(odd) {
+             background-color: var(--card-bg-color);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondary-color);
+            border-radius: 2px;
+        }
+
+
+        header {
+            background: var(--card-bg-color);
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            gap: 1rem;
+        }
+
+        .logo img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        .search-bar {
+            flex-grow: 1;
+            margin: 0 1rem;
+            display: flex;
+        }
+
+        .search-bar input {
+            padding: 0.75rem;
+            width: 100%;
+            max-width: 450px;
+            border: 1px solid var(--border-color);
+            border-right: none;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+            outline-color: var(--secondary-color);
+        }
+
+        .search-bar button {
+            padding: 0.75rem 1.5rem;
+            background: var(--secondary-color);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 0 5px 5px 0;
+            transition: background 0.3s;
+            font-weight: 600;
+        }
+
+        .search-bar button:hover {
+            opacity: 0.9;
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        nav ul li a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            position: relative;
+            padding-bottom: 5px;
+        }
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease-out;
+        }
+        
+        nav ul li a:hover::after,
+        nav ul li a.active::after {
+            width: 100%;
+        }
+
+
+        nav ul li a:hover, .nav-item a.active {
+            color: var(--secondary-color);
+        }
+
+        #languageSelect, #currencySelect {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            background-color: var(--background-color);
+        }
+
+        .nav-toggle {
+            display: none;
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            color: var(--primary-color);
+            cursor: pointer;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: linear-gradient(rgba(0, 48, 135, 0.8), rgba(0, 48, 135, 0.8)), url('https://images.unsplash.com/photo-1542382156942-8255b7d0d75a?q=80&w=2070&auto=format&fit=crop') no-repeat center center/cover;
+            color: white;
+        }
+
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 153, 0, 0.4);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background: #e68a00;
+        }
+
+        .main-content {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: var(--card-bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            flex-shrink: 0;
+            position: sticky;
+            top: 100px; /* Adjust based on header height */
+        }
+        
+        .sidebar-title {
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .sidebar ul { list-style: none; }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            display: block;
+            padding: 0.6rem;
+            border-radius: 5px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .sidebar > ul > li > a {
+            font-weight: 500;
+        }
+
+        .sidebar ul li a:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .sidebar > ul > li > ul { padding-left: 1.2rem; }
+        .sidebar > ul > li > ul > li a {
+            font-size: 0.9rem;
+        }
+
+
+        .products {
+            flex-grow: 1;
+        }
+
+        .breadcrumbs {
+            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumbs a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .breadcrumbs a:hover {
+            text-decoration: underline;
+        }
+
+        .filters {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .filters select, .filters input {
+            padding: 0.75rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            font-size: 0.9rem;
+            width: 100%;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            background: var(--card-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            text-align: center;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 48, 135, 0.1);
+        }
+
+        .product-image-container {
+            width: 100%;
+            height: 200px;
+            padding: 1rem;
+        }
+        
+        .product-card img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .product-info {
+            padding: 1rem 1.5rem;
+            border-top: 1px solid var(--border-color);
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card h3 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            flex-grow: 1;
+        }
+
+        .product-card .price {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .product-card .options {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .product-card select,
+        .product-card input[type="number"] {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .product-card input[type="number"] {
+            text-align: center;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .btn-quickview {
+            background: #eee;
+            color: #333;
+            box-shadow: none;
+        }
+        .btn-quickview:hover {
+            background: #ddd;
+        }
+        
+        .product-overlay-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #28a745;
+            color: white;
+            padding: 0.3rem 0.6rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .icon-btn {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s, color 0.3s;
+        }
+        
+        .icon-btn:hover { background: var(--secondary-color); color: white; }
+        .like-btn { color: #ccc; }
+        .like-btn.liked { color: #e74c3c; }
+        .wishlist-btn { color: #ccc; }
+        .wishlist-btn.wished { color: #3498db; }
+        
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 3rem;
+        }
+
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border-color);
+            background: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        .pagination button:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            border-color: var(--secondary-color);
+        }
+
+        .pagination button.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* --- Sections CSS --- */
+        .cart-section, .wishlist-section {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 2rem auto;
+        }
+
+        /* Contact Section */
+        #contact-us { padding-bottom: 0; }
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: flex-start;
+        }
+        .contact-form-container, .contact-info-container {
+            padding: 2rem;
+            background-color: var(--card-bg-color);
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+        .contact-form-container h3, .contact-info-container h3 { margin-bottom: 1.5rem; }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label {
+            display: block;
+            margin-bottom: .5rem;
+            font-weight: 500;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: .75rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+        }
+        .contact-info p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+        }
+        .contact-info p svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--secondary-color);
+            flex-shrink: 0;
+        }
+        
+        .map-container {
+            margin-top: 2rem;
+            overflow: hidden;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        
+        /* FAQ Section */
+        .faq-container { max-width: 800px; margin: auto; }
+        .faq-item {
+            background: var(--card-bg-color);
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .faq-item summary {
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            list-style: none; /* remove triangle */
+            position: relative;
+        }
+        .faq-item summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.5rem;
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        .faq-item[open] summary::after {
+            transform: rotate(45deg);
+        }
+        .faq-item p { padding: 0 1.5rem 1.5rem; }
+        
+        /* Brands Section */
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 2rem;
+            align-items: center;
+        }
+        .brand-logo {
+            text-align: center;
+            padding: 1rem;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: all 0.3s;
+        }
+        .brand-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        .brand-logo img {
+            max-width: 120px;
+            height: auto;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 3rem 0 1rem 0;
+            margin-top: 3rem;
+        }
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+        .footer-col h4 {
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+        .footer-col p, .footer-col ul li {
+            margin-bottom: 1rem;
+            color: rgba(255,255,255,0.8);
+        }
+        .footer-col ul { list-style: none; }
+        .footer-col ul a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s, padding-left 0.3s;
+        }
+        .footer-col ul a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: none; /* Initially hidden */
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.4s, transform 0.4s;
+            transform: translateY(20px);
+        }
+
+        .back-to-top.visible {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Fade in on scroll */
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 992px) {
+             .main-content { flex-direction: column; }
+            .sidebar {
+                width: 100%;
+                position: static; /* No longer sticky on tablet/mobile */
+            }
+            .contact-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .section-title { font-size: 2rem; }
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav { width: 100%; justify-content: center; }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                gap: 0.5rem;
+                width: 100%;
+                margin-top: 1rem;
+            }
+            .nav-toggle { display: block; position: absolute; top: 1.5rem; right: 1rem;}
+            nav ul.active { display: flex; }
+            .hero h1 { font-size: 2.2rem; }
+            .hero p { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <a href="#home" class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP8uCeUE5rTj2Hbt1FWq2SntFCKQFV7paJdg&s" alt="DJOUIMAA Plomberie Logo">
+        </a>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Rechercher (ex: Chaudière murale, Raccord PPR...)" aria-label="Rechercher des produits">
+            <button onclick="searchProducts()">Rechercher</button>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+        <nav id="mainNav">
+             <ul>
+                <li><a href="#home" class="nav-item">Accueil</a></li>
+                <li><a href="#products-section" class="nav-item">Produits</a></li>
+                <li><a href="#brands" class="nav-item">Marques</a></li>
+                <li><a href="#faq" class="nav-item">FAQ</a></li>
+                <li><a href="#contact-us" class="nav-item">Contact</a></li>
+                <li><a href="#cart-section" class="nav-item">Panier</a></li>
+                <li>
+                    <select id="currencySelect" aria-label="Choisir la devise">
+                        <option value="DZD" selected>DZD</option>
+                        <option value="USD">USD</option>
+                        <option value="EUR">EUR</option>
+                    </select>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h1>DJOUIMAA PLOMBRIE CHAUFAGE SANITAIRE</h1>
+            <p>Votre expert à Sétif pour des solutions de qualité depuis 1988.</p>
+            <a href="#products-section" class="btn">Découvrir nos Produits</a>
+        </section>
+
+        <section id="products-section" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Nos Produits</h2>
+                <div class="main-content">
+                    <aside class="sidebar">
+                        <h3 class="sidebar-title">Catégories</h3>
+                         <ul>
+                            <li><a href="#" onclick="filterByCategory('')">Toutes les Catégories</a></li>
+                             <li>
+                                <a href="#" onclick="filterByCategory('Plomberie')">Plomberie</a>
+                                <ul>
+                                    <li><a href="#" onclick="filterBySubcategory('RACCORDEMENT MULTICOUCHE')">Raccordement Multicouche</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('RACCORDEMENT PPR BLANC')">Raccordement PPR Blanc</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('SIPHON ET CANIVEAU')">Siphon et Caniveau</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('TUBE CUIVRE')">Tube Cuivre</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('TUBE PVC')">Tube PVC</a></li>
+                                     <li><a href="#" onclick="filterBySubcategory('TUBE PEX')">Tube PEX</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CUVE ET RÉSERVOIR')">Cuve et Réservoir</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('FILTRE À EAU ET ADOUCISSEUR')">Filtre à Eau</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('POMPE À EAU ET SURPRESSEUR')">Pompe & Surpresseur</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('RACCORD PVC')">Raccord PVC</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('RACCORDEMENT PEHD')">Raccordement PEHD</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('VANNE')">Vanne</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick="filterByCategory('Sanitaire et Robinetterie')">Sanitaire & Robinetterie</a>
+                                <ul>
+                                    <li><a href="#" onclick="filterBySubcategory('MEUBLE DE BAIN')">Meuble de Bain</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CHASSES D\'EAU ENCASTRABLES')">Chasse d'Eau Encastrable</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('COLONNE DE DOUCHE')">Colonne de Douche</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CUVETTES')">Cuvettes WC</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('ÉVIER DE CUISINE')">Évier de Cuisine</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('LAVABO')">Lavabo</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('MITIGEUR ET MÉLANGEUR')">Mitigeur & Mélangeur</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('RECEVEUR DE DOUCHE')">Receveur de Douche</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick="filterByCategory('Chauffage')">Chauffage</a>
+                                <ul>
+                                    <li><a href="#" onclick="filterBySubcategory('ACCESSOIRES CHAUFFAGE')">Accessoires Chauffage</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('BRÛLEUR')">Brûleur</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('LES CHAUDIÈRES AU SOL')">Chaudière au Sol</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CHAUDIÈRE MURALE')">Chaudière Murale</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CHAUFFAGE À GAZ')">Chauffage à Gaz</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('POMPE ACCÉLÉRATION')">Pompe d'Accélération</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('RADIATEUR ALUMINIUM')">Radiateur Aluminium</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('CHAUFFE BAIN ET CUMULUS')">Chauffe Bain & Cumulus</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('SÈCHE-SERVIETTE')">Sèche-Serviette</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick="filterByCategory('Piscine et Spa')">Piscine & Spa</a>
+                                <ul>
+                                    <li><a href="#" onclick="filterBySubcategory('POMPES POUR PISCINE')">Pompes pour Piscine</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('FILTRES POUR PISCINE')">Filtres pour Piscine</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('ACCESSOIRES DE NETTOYAGE ET ENTRETIEN')">Nettoyage & Entretien</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('ÉQUIPEMENTS À SCELLER')">Équipements à Sceller</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('ÉCLAIRAGE POUR PISCINE')">Éclairage pour Piscine</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('PRODUITS ENTRETIEN')">Produits d'Entretien</a></li>
+                                    <li><a href="#" onclick="filterBySubcategory('JACUZZI')">Jacuzzi</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </aside>
+
+                    <div class="products">
+                        <div class="breadcrumbs">
+                            <a href="#" onclick="filterByCategory('')">Accueil</a> <span id="breadcrumbCategory"></span> <span id="breadcrumbSubcategory"></span>
+                        </div>
+                        <div class="filters">
+                            <select id="categoryFilter" aria-label="Filtrer par catégorie">
+                                <option value="">Catégories</option>
+                            </select>
+                            <select id="subcategoryFilter" aria-label="Filtrer par sous-catégorie">
+                                <option value="">Sous-catégories</option>
+                            </select>
+                            <select id="brandFilter" aria-label="Filtrer par marque">
+                                <option value="">Marques</option>
+                            </select>
+                            <input type="number" id="minPrice" placeholder="Prix Min" min="0" aria-label="Prix minimum">
+                            <input type="number" id="maxPrice" placeholder="Prix Max" min="0" aria-label="Prix maximum">
+                            <select id="sortSelect" aria-label="Trier les produits">
+                                <option value="">Tri par Défaut</option>
+                                <option value="priceAsc">Prix Croissant</option>
+                                <option value="priceDesc">Prix Décroissant</option>
+                                <option value="recent">Plus Récents</option>
+                                <option value="popularity">Popularité</option>
+                            </select>
+                        </div>
+                        <div id="productGrid" class="product-grid"></div>
+                        <div class="pagination" id="pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart-section" class="cart-section fade-in-section">
+            <h2 class="section-title">Votre Panier</h2>
+            <div id="cartItems"></div>
+            <div id="cartSummary" class="cart-summary">Total: <span id="cartTotal">0.00 DZD</span></div>
+            <div class="cart-checkout" style="text-align: center; margin-top: 2rem;">
+                <button class="btn" onclick="checkout()">Passer la Commande</button>
+            </div>
+        </section>
+
+        <section id="brands" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Nos Marques Partenaires</h2>
+                <div class="brands-grid">
+                    <div class="brand-logo"><img src="https://i.imgur.com/k2p8m2f.png" alt="Geberit"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/xH0Yyv5.png" alt="Grohe"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/d2xL5pG.png" alt="Bosch"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/gOYY9e8.png" alt="Tiemme"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/mO3i312.png" alt="Vaillant"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/L1D3xL9.png" alt="Grundfos"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/R8N3Xk3.png" alt="Ideal Standard"></div>
+                    <div class="brand-logo"><img src="https://i.imgur.com/E9hAaxD.png" alt="Roca"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Foire Aux Questions</h2>
+                <div class="faq-container">
+                    <details class="faq-item">
+                        <summary>Quels sont les délais de livraison ?</summary>
+                        <p>Pour Sétif et ses environs, la livraison s'effectue généralement en 24h à 48h. Pour les autres wilayas, le délai peut varier de 2 à 5 jours ouvrables.</p>
+                    </details>
+                     <details class="faq-item">
+                        <summary>La livraison est-elle gratuite ?</summary>
+                        <p>Oui, nous offrons la livraison locale gratuite dans la wilaya de Sétif pour toute commande supérieure à 5,000 DZD.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Proposez-vous des services d'installation ?</summary>
+                        <p>Absolument. Nous disposons d'une équipe de professionnels qualifiés pour l'installation de tous les produits que nous vendons, du simple robinet aux systèmes de chauffage complets.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Comment puis-je obtenir un devis pour un projet ?</summary>
+                        <p>Vous pouvez nous contacter via le formulaire sur notre site, par téléphone au +213 36 32 57 82, ou en visitant notre magasin à Ouled Brahem pour discuter de votre projet et obtenir un devis personnalisé.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us" class="fade-in-section">
+            <div class="container">
+                <h2 class="section-title">Contact & Emplacement</h2>
+                <div class="contact-container">
+                    <div class="contact-info-container">
+                        <h3>Nos Coordonnées</h3>
+                        <div class="contact-info">
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 1a8 8 0 0 0-8 8c0 5.4 7.05 13.5 7.43 13.88a1 1 0 0 0 1.14 0C13 22.5 20 16.4 20 9a8 8 0 0 0-8-8zm0 11.5a3.5 3.5 0 1 1 3.5-3.5A3.5 3.5 0 0 1 12 12.5z"/></svg>
+                                <span>Ouled Brahem, Sétif, Algérie, 19000</span>
+                            </p>
+                            <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6.62 10.79a15.42 15.42 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1v3.5a1 1 0 0 1-1 1A17.5 17.5 0 0 1 3 4.5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.24 1.02l-2.2 2.2z"/></svg>
+                                <span>+213 36 32 57 82</span>
+                            </p>
+                             <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.25l-7.3 4.87c-.45.3-.95.3-1.4 0L4 8.25V6h16v2.25z"/></svg>
+                                <span>info@djouimaa-plomberie.com</span>
+                            </p>
+                             <p>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                                <span>Ouvert Samedi - Jeudi, 08:00 - 18:00</span>
+                            </p>
+                        </div>
+                         <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3219.8151296367573!2d5.43157212438386!3d36.19537767242585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f3150078053ab5%3A0x194a9c41e1d1deb7!2sdjouimaa%20plombrie%20chaufage%20sanitair!5e0!3m2!1sar!2sdz!4v1721839706509!5m2!1sar!2sdz" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                     <div class="contact-form-container">
+                        <h3>Envoyez-nous un message</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Votre Nom</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Votre Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                             <div class="form-group">
+                                <label for="subject">Sujet</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Votre Message</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h4>DJOUIMAA PLOMBERIE</h4>
+                    <p>Votre partenaire de confiance pour tous vos besoins en plomberie, chauffage et sanitaire à Sétif et ses environs depuis 1988.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#products-section">Produits</a></li>
+                        <li><a href="#brands">Marques</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#contact-us">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul>
+                       <li><p>Ouled Brahem, Sétif</p></li>
+                       <li><p>+213 36 32 57 82</p></li>
+                       <li><p>info@djouimaa.com</p></li>
+                       <li><p>Livraison locale gratuite à Sétif pour commandes > 5000 DZD</p></li>
+                    </ul>
+                </div>
+                 <div class="footer-col">
+                    <h4>Suivez-nous</h4>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100064759063598" target="_blank">Facebook</a></li>
+                        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+             <div class="footer-bottom">
+                <p>&copy; 2024 DJOUIMAA PLOMBRIE CHAUFAGE SANITAIRE. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button id="backToTop" class="back-to-top" title="Retour en haut">&#8679;</button>
+
+    <script>
+        const CURRENCY_RATES = { DZD: 1, USD: 0.0074, EUR: 0.0069 };
+        const PRODUCTS_PER_PAGE = 12;
+        let currentPage = 1;
+        
+        const products = [
+            // Plomberie (Multicouche, PPR, PVC, Filtres, Pompes, Vannes)
+            { id: 1, name: "Raccord Multicouche Droit Tiemme 16x2.0", brand: "Tiemme", price: 750.00, image: "https://i.imgur.com/GzBWy80.jpeg", category: "Plomberie", subcategory: "RACCORDEMENT MULTICOUCHE", likes: 25 },
+            { id: 2, name: "Raccord Coudé Multicouche Tiemme 20x2.0", brand: "Tiemme", price: 900.00, image: "https://i.imgur.com/N50w4y5.jpeg", category: "Plomberie", subcategory: "RACCORDEMENT MULTICOUCHE", likes: 18 },
+            { id: 3, name: "Manchon Femelle PPR 25mm", brand: "Generic", price: 120.00, image: "https://i.imgur.com/7vVd9q9.jpeg", category: "Plomberie", subcategory: "RACCORDEMENT PPR BLANC", likes: 30 },
+            { id: 4, name: "Tube PVC Évacuation D100 (mètre)", brand: "Generic", price: 850.00, image: "https://i.imgur.com/z47xPjI.jpeg", category: "Plomberie", subcategory: "TUBE PVC", likes: 40 },
+            { id: 5, name: "Filtre à Eau Double Atlas", brand: "Atlas", price: 7200.00, image: "https://i.imgur.com/V9F9D6T.jpeg", category: "Plomberie", subcategory: "FILTRE À EAU ET ADOUCISSEUR", likes: 55, isNew: true },
+            { id: 6, name: "Pompe de Surface Pedrollo PKm 60", brand: "Pedrollo", price: 14500.00, image: "https://i.imgur.com/YhH2s6l.jpeg", category: "Plomberie", subcategory: "POMPE À EAU ET SURPRESSEUR", likes: 60 },
+            { id: 7, name: "Vanne à Sphère Papillon 1/2\"", brand: "Europa", price: 550.00, image: "https://i.imgur.com/0uBvXfW.jpeg", category: "Plomberie", subcategory: "VANNE", likes: 22 },
+            { id: 8, name: "Surpresseur d'Eau avec Réservoir 24L", brand: "Grundfos", price: 38000.00, image: "https://i.imgur.com/gK2Ea3b.jpeg", category: "Plomberie", subcategory: "POMPE À EAU ET SURPRESSEUR", likes: 48 },
+            { id: 121, name: "Coude PVC Pression 90° D50", brand: "Generic", price: 300.00, image: "https://i.imgur.com/N1Hn8hD.jpeg", category: "Plomberie", subcategory: "RACCORD PVC" },
+            { id: 122, name: "Caniveau de Douche Inox 60cm", brand: "Generic", price: 4500.00, image: "https://i.imgur.com/F0j7o9c.jpeg", category: "Plomberie", subcategory: "SIPHON ET CANIVEAU", isNew: true },
+            { id: 123, name: "Réservoir d'eau vertical 1000L", brand: "Generic", price: 15000.00, image: "https://i.imgur.com/n1lJ3E9.jpeg", category: "Plomberie", subcategory: "CUVE ET RÉSERVOIR" },
+            { id: 124, name: "Tube PEX nu rouge (mètre)", brand: "Generic", price: 180.00, image: "https://i.imgur.com/dE2g6qW.jpeg", category: "Plomberie", subcategory: "TUBE PEX" },
+
+            // Sanitaire & Robinetterie
+            { id: 9, name: "Mitigeur de Lavabo Chromé Grohe", brand: "Grohe", price: 18500.00, image: "https://i.imgur.com/s6X8Y4j.jpeg", category: "Sanitaire et Robinetterie", subcategory: "MITIGEUR ET MÉLANGEUR", likes: 75, isNew: true },
+            { id: 10, name: "Ensemble Meuble de Bain Suspendu 80cm", brand: "Ideal Standard", price: 62000.00, image: "https://i.imgur.com/W2t7P7i.jpeg", category: "Sanitaire et Robinetterie", subcategory: "MEUBLE DE BAIN", likes: 80 },
+            { id: 11, name: "Cuvette WC Suspendue Geberit Rimfree", brand: "Geberit", price: 35000.00, image: "https://i.imgur.com/wP0c5k4.jpeg", category: "Sanitaire et Robinetterie", subcategory: "CUVETTES", likes: 95 },
+            { id: 12, name: "Bâti-Support Geberit Duofix", brand: "Geberit", price: 45000.00, image: "https://i.imgur.com/j4oFfE2.jpeg", category: "Sanitaire et Robinetterie", subcategory: "CHASSES D'EAU ENCASTRABLES", likes: 110 },
+            { id: 13, name: "Colonne de Douche Thermostatique", brand: "Grohe", price: 58000.00, image: "https://i.imgur.com/4hNl7P3.jpeg", category: "Sanitaire et Robinetterie", subcategory: "COLONNE DE DOUCHE", likes: 88 },
+            { id: 14, name: "Évier de Cuisine Inox 2 Bacs", brand: "Generic", price: 21000.00, image: "https://i.imgur.com/n3x0t5M.jpeg", category: "Sanitaire et Robinetterie", subcategory: "ÉVIER DE CUISINE", likes: 65 },
+            { id: 15, name: "Receveur de Douche Extra-plat 120x80cm", brand: "Roca", price: 28000.00, image: "https://i.imgur.com/jR9P6h3.jpeg", category: "Sanitaire et Robinetterie", subcategory: "RECEVEUR DE DOUCHE", likes: 70 },
+            { id: 125, name: "Lavabo à poser en céramique blanc", brand: "Roca", price: 12500.00, image: "https://i.imgur.com/m5e2s8N.jpeg", category: "Sanitaire et Robinetterie", subcategory: "LAVABO", isNew: true },
+            { id: 126, name: "Mitigeur de cuisine avec douchette extractible", brand: "Grohe", price: 29500.00, image: "https://i.imgur.com/I2v1E9V.jpeg", category: "Sanitaire et Robinetterie", subcategory: "MITIGEUR ET MÉLANGEUR", likes: 50 },
+
+            // Chauffage
+            { id: 16, name: "Chaudière Murale à Condensation Bosch 24kW", brand: "Bosch", price: 125000.00, image: "https://i.imgur.com/mC2uG7W.jpeg", category: "Chauffage", subcategory: "CHAUDIÈRE MURALE", likes: 150 },
+            { id: 17, name: "Radiateur Aluminium 10 Éléments", brand: "Global", price: 11500.00, image: "https://i.imgur.com/tYp4Yt2.jpeg", category: "Chauffage", subcategory: "RADIATEUR ALUMINIUM", likes: 130 },
+            { id: 18, name: "Sèche-Serviette Électrique 500W", brand: "Acova", price: 22000.00, image: "https://i.imgur.com/pA8vH7A.jpeg", category: "Chauffage", subcategory: "SÈCHE-SERVIETTE", likes: 78, isNew: true },
+            { id: 19, name: "Chauffe-Bain à Gaz Vaillant 11L", brand: "Vaillant", price: 29800.00, image: "https://i.imgur.com/x4WjN7q.jpeg", category: "Chauffage", subcategory: "CHAUFFE BAIN ET CUMULUS", likes: 99 },
+            { id: 20, name: "Circulateur de Chauffage Grundfos Alpha2", brand: "Grundfos", price: 27500.00, image: "https://i.imgur.com/uN2M4D2.jpeg", category: "Chauffage", subcategory: "POMPE ACCÉLÉRATION", likes: 85 },
+            { id: 127, name: "Thermostat d'ambiance programmable", brand: "Danfoss", price: 8500.00, image: "https://i.imgur.com/UfG5qg7.jpeg", category: "Chauffage", subcategory: "ACCESSOIRES CHAUFFAGE", likes: 60 },
+            { id: 128, name: "Chaudière au Sol Fonte/Gaz Riello", brand: "Riello", price: 210000.00, image: "https://i.imgur.com/s6nBf7X.jpeg", category: "Chauffage", subcategory: "LES CHAUDIÈRES AU SOL" },
+            { id: 129, name: "Chauffage à Gaz de ville 4500W", brand: "Generic", price: 12000.00, image: "https://i.imgur.com/s8zV6sB.jpeg", category: "Chauffage", subcategory: "CHAUFFAGE À GAZ" },
+
+            // Piscine & Spa
+            { id: 21, name: "Pompe de Filtration pour Piscine 1CV", brand: "Hayward", price: 48000.00, image: "https://i.imgur.com/lH6V9gB.jpeg", category: "Piscine et Spa", subcategory: "POMPES POUR PISCINE", likes: 45 },
+            { id: 22, name: "Filtre à Sable pour Piscine D600", brand: "AstralPool", price: 65000.00, image: "https://i.imgur.com/aB5vj7Y.jpeg", category: "Piscine et Spa", subcategory: "FILTRES POUR PISCINE", likes: 52 },
+            { id: 23, name: "Projecteur LED Piscine Couleur", brand: "Generic", price: 14000.00, image: "https://i.imgur.com/eB3MhB2.jpeg", category: "Piscine et Spa", subcategory: "ÉCLAIRAGE POUR PISCINE", likes: 35 },
+            { id: 24, name: "Robot Nettoyeur de Piscine Zodiac", brand: "Zodiac", price: 115000.00, image: "https://i.imgur.com/tC5fR7d.jpeg", category: "Piscine et Spa", subcategory: "ACCESSOIRES DE NETTOYAGE ET ENTRETIEN", likes: 68, isNew: true },
+            { id: 130, name: "Skimmer pour Piscine Béton", brand: "AstralPool", price: 6500.00, image: "https://i.imgur.com/lWj2h9P.jpeg", category: "Piscine et Spa", subcategory: "ÉQUIPEMENTS À SCELLER" },
+            { id: 131, name: "Chlore multifonctions galets 5kg", brand: "Generic", price: 9500.00, image: "https://i.imgur.com/sN2vS9R.jpeg", category: "Piscine et Spa", subcategory: "PRODUITS ENTRETIEN" },
+            { id: 132, name: "Spa Jacuzzi Gonflable 4 places", brand: "Intex", price: 98000.00, image: "https://i.imgur.com/FjM6P5f.jpeg", category: "Piscine et Spa", subcategory: "JACUZZI", likes: 77, isNew: true },
+        ];
+        
+        // --- Add ~80 more dummy products ---
+        let currentId = 133;
+        const moreProducts = [];
+        const sampleBrands = ["Generic", "Pro", "Standard", "Plus"];
+        for(let i=0; i < 20; i++) {
+           moreProducts.push({ id: currentId++, name: `Raccord en Laiton ${i+1}`, brand: sampleBrands[i%4], price: 300 + (i*20), image: 'https://i.imgur.com/GzBWy80.jpeg', category: 'Plomberie', subcategory: 'RACCORDEMENT PPR BLANC' });
+           moreProducts.push({ id: currentId++, name: `Siphon de sol Inox ${i+1}`, brand: sampleBrands[i%4], price: 1200 + (i*50), image: 'https://i.imgur.com/F0j7o9c.jpeg', category: 'Plomberie', subcategory: 'SIPHON ET CANIVEAU' });
+           moreProducts.push({ id: currentId++, name: `Robinet d'arrêt ${i+1}`, brand: sampleBrands[i%4], price: 800 + (i*30), image: 'https://i.imgur.com/0uBvXfW.jpeg', category: 'Plomberie', subcategory: 'VANNE' });
+           moreProducts.push({ id: currentId++, name: `Accessoire de bain ${i+1}`, brand: 'Ideal Standard', price: 2500 + (i*100), image: 'https://i.imgur.com/I2v1E9V.jpeg', category: 'Sanitaire et Robinetterie', subcategory: 'ACCESSOIRES SALLE DE BAIN' });
+           moreProducts.push({ id: currentId++, name: `Vanne de radiateur ${i+1}`, brand: 'Danfoss', price: 2200 + (i*50), image: 'https://i.imgur.com/UfG5qg7.jpeg', category: 'Chauffage', subcategory: 'ACCESSOIRES CHAUFFAGE' });
+           moreProducts.push({ id: currentId++, name: `Brosse de nettoyage piscine ${i+1}`, brand: 'AstralPool', price: 3500 + (i*70), image: 'https://i.imgur.com/tC5fR7d.jpeg', category: 'Piscine et Spa', subcategory: 'ACCESSOIRES DE NETTOYAGE ET ENTRETIEN' });
+        }
+        products.push(...moreProducts);
+        
+        // Make product list larger for demo
+        let startId = products.length + 1;
+        const additionalProducts = JSON.parse(JSON.stringify(products.slice(0, 78)));
+        additionalProducts.forEach((p, i) => { p.id = startId + i; });
+        products.push(...additionalProducts);
+        // -- end of product generation
+        
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const allCategories = [...new Set(products.map(p => p.category))];
+            const categoryFilter = document.getElementById('categoryFilter');
+            allCategories.forEach(cat => categoryFilter.innerHTML += `<option value="${cat}">${cat}</option>`);
+
+            const allBrands = [...new Set(products.map(p => p.brand))].sort();
+            const brandFilter = document.getElementById('brandFilter');
+            allBrands.forEach(brand => brandFilter.innerHTML += `<option value="${brand}">${brand}</option>`);
+            
+            // --- Event Listeners Setup ---
+            document.getElementById('categoryFilter').addEventListener('change', () => filterByCategory(document.getElementById('categoryFilter').value));
+            document.getElementById('subcategoryFilter').addEventListener('change', () => displayProducts(1));
+            document.getElementById('brandFilter').addEventListener('change', () => displayProducts(1));
+            document.getElementById('minPrice').addEventListener('input', () => displayProducts(1));
+            document.getElementById('maxPrice').addEventListener('input', () => displayProducts(1));
+            document.getElementById('sortSelect').addEventListener('change', () => displayProducts(1));
+            document.getElementById('searchInput').addEventListener('input', () => displayProducts(1));
+            document.getElementById('currencySelect').addEventListener('change', refreshAllData);
+
+            document.querySelector('.nav-toggle').addEventListener('click', () => {
+                 document.querySelector('#mainNav ul').classList.toggle('active');
+            });
+            
+            // Handle the two contact forms
+             document.querySelectorAll('#contactForm').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault(); 
+                    alert('Merci ! Votre message a été envoyé avec succès. Nous vous répondrons bientôt.');
+                    this.reset();
+                });
+            });
+            
+            // Back to top button
+            const backToTopButton = document.getElementById("backToTop");
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add("visible");
+                } else {
+                    backToTopButton.classList.remove("visible");
+                }
+            });
+            backToTopButton.addEventListener("click", () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+            
+            // Fade-in sections
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-section').forEach(section => observer.observe(section));
+
+            
+            // Initial Load
+            displayProducts();
+        });
+
+        function refreshAllData() {
+            displayProducts(currentPage);
+        }
+
+        function displayProducts(page = 1) {
+            currentPage = page;
+            const productGrid = document.getElementById('productGrid');
+            const filteredProducts = filterProducts();
+            
+            productGrid.innerHTML = '';
+            
+            const start = (page - 1) * PRODUCTS_PER_PAGE;
+            const end = start + PRODUCTS_PER_PAGE;
+            const paginatedProducts = filteredProducts.slice(start, end);
+
+            if (paginatedProducts.length === 0) {
+                productGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center;">Aucun produit ne correspond à votre recherche.</p>';
+            }
+
+            paginatedProducts.forEach(product => {
+                const isNew = product.isNew ? '<span class="badge">Nouveau</span>' : '';
+
+                const productCardHTML = `
+                    <div class="product-card" data-id="${product.id}">
+                        ${isNew}
+                         <div class="product-overlay-buttons">
+                            <button class="icon-btn like-btn ${product.likes > 1 ? 'liked': ''}" title="Aimer ce produit" onclick="toggleLike(this, ${product.id})">♥</button>
+                        </div>
+                        <div class="product-image-container">
+                             <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        </div>
+                        <div class="product-info">
+                            <h3>${product.name}</h3>
+                            <p class="price">${convertPrice(product.price)} <span class="currency">${document.getElementById('currencySelect').value}</span></p>
+                             <div class="options">
+                                 <input type="number" min="1" value="1" class="quantity" aria-label="Quantité">
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn" onclick="addToCart(${product.id})">Ajouter au Panier</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                productGrid.innerHTML += productCardHTML;
+            });
+
+            updatePagination(filteredProducts.length, page);
+        }
+
+        function filterProducts() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const category = document.getElementById('categoryFilter').value;
+            const subcategory = document.getElementById('subcategoryFilter').value;
+            const brand = document.getElementById('brandFilter').value;
+            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || Infinity;
+            const sort = document.getElementById('sortSelect').value;
+
+            let filtered = products.filter(product => {
+                const priceInDZD = product.price;
+                return (
+                    (product.name.toLowerCase().includes(search) || product.brand.toLowerCase().includes(search)) &&
+                    (!category || product.category === category) &&
+                    (!subcategory || product.subcategory === subcategory) &&
+                    (!brand || product.brand === brand) &&
+                    priceInDZD >= minPrice &&
+                    priceInDZD <= maxPrice
+                );
+            });
+
+            if (sort === 'popularity') filtered.sort((a, b) => (b.likes || 0) - (a.likes || 0));
+            if (sort === 'recent') filtered.sort((a, b) => b.id - a.id);
+            if (sort === 'priceAsc') filtered.sort((a, b) => a.price - b.price);
+            if (sort === 'priceDesc') filtered.sort((a, b) => b.price - a.price);
+
+            return filtered;
+        }
+
+        function updatePagination(totalProducts, page) {
+            const totalPages = Math.ceil(totalProducts / PRODUCTS_PER_PAGE);
+            const pagination = document.getElementById('pagination');
+            pagination.innerHTML = '';
+            if (totalPages <= 1) return;
+
+            for (let i = 1; i <= totalPages; i++) {
+                pagination.innerHTML += `<button class="${i === page ? 'active' : ''}" onclick="changePage(${i})">${i}</button>`;
+            }
+        }
+        
+        function changePage(page) {
+            displayProducts(page);
+            document.getElementById('products-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function convertPrice(priceInDZD) {
+            const currency = document.getElementById('currencySelect').value;
+            return (priceInDZD * CURRENCY_RATES[currency]).toFixed(2);
+        }
+        
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const card = document.querySelector(`[data-id="${productId}"]`);
+            const quantity = parseInt(card.querySelector('.quantity').value);
+
+            // In this simplified version, we ignore options. Add logic for size/dimension if needed.
+            // ...
+
+            alert(`${quantity} x ${product.name} a été ajouté au panier !`);
+        }
+        
+        function toggleLike(button, productId) {
+            const product = products.find(p => p.id === productId);
+            if (product) {
+                product.likes = (product.likes || 0) + 1; // Always increment likes
+                 button.classList.add('liked');
+                 button.title = "Merci pour votre appréciation !";
+            }
+        }
+
+        function searchProducts() {
+            displayProducts(1);
+        }
+
+        function filterByCategory(category) {
+            document.getElementById('categoryFilter').value = category;
+            updateSubcategoryFilter(category);
+            document.getElementById('breadcrumbCategory').textContent = category ? `> ${category}` : '';
+            document.getElementById('breadcrumbSubcategory').textContent = '';
+            displayProducts(1);
+        }
+        
+        function filterBySubcategory(subcategory) {
+            const product = products.find(p => p.subcategory === subcategory);
+            if(product) {
+                document.getElementById('categoryFilter').value = product.category;
+                 updateSubcategoryFilter(product.category);
+            }
+            document.getElementById('subcategoryFilter').value = subcategory;
+            
+            const category = document.getElementById('categoryFilter').value;
+            document.getElementById('breadcrumbCategory').textContent = category ? `> ${category}` : '';
+            document.getElementById('breadcrumbSubcategory').textContent = subcategory ? `> ${subcategory}` : '';
+
+            displayProducts(1);
+        }
+        
+        function updateSubcategoryFilter(category) {
+            const subcategoryFilter = document.getElementById('subcategoryFilter');
+            subcategoryFilter.innerHTML = '<option value="">Sous-catégories</option>';
+            if (!category) return;
+
+            const subcategories = [...new Set(products
+                .filter(p => p.category === category)
+                .map(p => p.subcategory)
+                .filter(Boolean) // Remove any undefined/null values
+            )].sort();
+
+            subcategories.forEach(sub => {
+                subcategoryFilter.innerHTML += `<option value="${sub}">${sub}</option>`;
+            });
+        }
+        
+        function checkout() {
+             alert('Ceci est une démonstration. La fonctionnalité de paiement n\'est pas implémentée. Merci de nous contacter pour finaliser votre commande !');
+        }
+
+    </script>
+</body>
+</html>
